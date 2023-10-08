@@ -3,12 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>GFFG</title>
+    <style media="screen">
+      body {
+        display: block;
+      }
+      .input {
+        height: 50px;
+      }
+      .result {
+        width: 50vw;
+        min-width: 1000px;
+      }
+      #result {
+        width: 100%;
+        height: calc(100vh - 100px);
+      }
+    </style>
   </head>
   <body>
-    <label for="from">from</label>
-    <input type="text" id="from" name="from" value="">
-    <label for="to">to</label>
-    <input type="text" id="to" name="to" value="">
-    <button>Generate</button>
+    <div class="input">
+      <label>from</label>
+      <input type="text" id="from" name="from" value="">
+      <label>to</label>
+      <input type="text" id="to" name="to" value="">
+      <button onclick="gen();">Generate</button>
+      <button onclick="copy();">Copy</button>
+    </div>
+    <div class="result">
+      <textarea id="result" name="result" readonly="yes">
+      </textarea>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
