@@ -3,37 +3,93 @@
   <head>
     <meta charset="utf-8">
     <title>GFFG</title>
-    <style media="screen">
-      body {
-        display: block;
-      }
-      .input {
-        height: 50px;
-      }
-      .result {
-        width: 50vw;
-        min-width: 1000px;
-      }
-      #result {
-        width: 100%;
-        height: calc(100vh - 100px);
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://andre-c01.github.io/gffg/styles.css">
   </head>
   <body>
-    <div class="input">
-      <label>from</label>
-      <input type="text" id="from" name="from" value="">
-      <label>to</label>
-      <input type="text" id="to" name="to" value="">
-      <button onclick="gen();">Generate</button>
-      <button onclick="copy();">Copy</button>
+
+    <div class="main">
+
+      <div class="panel-1 _panel">
+        <div class="col-1">
+          <label class="_label" for="from">From</label><br>
+          <label class="_label" for="to">To</label><br>
+          <label class="_label" for="subject">Subject</label><br>
+          <label class="_label" for="includes">Includes the words</label><br>
+          <label class="_label" for="nincludes">Doesn't have</label>
+        </div>
+        <div class="col-2">
+          <input type="text" id="from" name="from"><br>
+          <input type="text" id="to" name="to"><br>
+          <input type="text" id="subject" name="subject"><br>
+          <input type="text" id="includes" name="includes"><br>
+          <input type="text" id="nincludes" name="nincludes"><br>
+        </div>
+      </div>
+
+      <div class="panel-2 _panel">
+        <p>
+          <input class="_check" id="skip_inbox" type="checkbox">
+          <label>Skip the inbox (Archive it)</label>
+        </p>
+
+        <p>
+          <input class="_check" id="mark_read" type="checkbox">
+          <label>Mark as read</label>
+        </p>
+
+        <p>
+          <input class="_check" id="star" type="checkbox">
+          <label>Star it</label>
+        </p>
+
+        <p>
+          <input class="_check" id="apply_label" type="checkbox">
+          <label>Apply the label</label>
+          <input type="text" id="label" name="label">
+        </p>
+
+        <p>
+          <input class="_check" id="forward" type="checkbox">
+          <label>Forward it to</label>
+          <input type="text" id="forwardto" name="forwardto">
+        </p>
+
+        <p>
+          <input class="_check" id="delete" type="checkbox">
+          <label>Delete it</label>
+        </p>
+
+        <p>
+          <input class="_check" id="never_spam" type="checkbox">
+          <label>Never send it to Spam</label>
+        </p>
+
+        <p>
+          <input class="_check" id="always_important" type="checkbox">
+          <label>Always mark it as important</label>
+        </p>
+
+        <p>
+          <input class="_check" id="categorise" type="checkbox">
+          <label>Categorise as</label>
+          <input type="text" id="category" name="category">
+        </p>
+
+      </div>
+
+      <div class="panel-3 _panel">
+        <textarea id="result" name="result" readonly="yes">
+        </textarea>
+      </div>
+
+      <div class="panel-4">
+        <button onclick="gen();">Generate</button>
+      </div>
+
     </div>
-    <div class="result">
-      <textarea id="result" name="result" readonly="yes">
-      </textarea>
-    </div>
-    <script type="text/javascript" src="script.js"></script>
+
     <script src="https://andre-c01.github.io/gffg/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

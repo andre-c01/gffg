@@ -1,9 +1,10 @@
 function gen() {
 
   const from = document.getElementById("from").value;
-  const to = document.getElementById("to").value;
+  const to = document.getElementById("forwardto").value;
   var emails = to.split(',');
   var email = '';
+
 
   document.getElementById('result').value=`<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
